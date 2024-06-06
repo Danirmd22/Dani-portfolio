@@ -2,19 +2,15 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 15px;
     line-height: 1.7;
     color: #c4c3ca;
     background-color: #1f2029;
-    overflow-x: hidden;
-    transition: all 300ms linear;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
+    
+   
+    
+    
 }
 
 a {
@@ -402,24 +398,94 @@ body.nav-active .nav__list-item:nth-child(10) {
 	background: #000;
 }
 
-.centrar {
+
+#header {
+	text-align: left;
+	
+	
+  }
+  
+  #welcome {
+	position: absolute;
+	top: 50%;
+	left: 65%;
+	transform: translate(-50%, -50%);
+  }
+  
+  
+  
+  
+
+  #header {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: center; /* Esto centrará verticalmente los elementos hijos */
+    justify-content: flex-start; /* Esto alineará los elementos hijos a la izquierda */
 }
 
-.two-columns {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#header #cara {
+    order: -1; /* Esto asegurará que la imagen siempre esté a la izquierda */
+    position: absolute; /* Esto permitirá posicionar la imagen en cualquier lugar de la página */
+    top: 50%; /* Esto colocará la imagen en el medio de la página */
+    left: 25%; /* Esto colocará la imagen a la izquierda de la página */
+    transform: translateY(-50%); /* Esto centrará verticalmente la imagen */
+	
 }
 
-.two-columns > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    padding: 10px;
-    box-sizing: border-box;
-}
+
+
+.social-icons {
+	padding: 0;
+	list-style: none;
+	margin: 1em;
+  }
+  
+  .social-icons li {
+	display: inline-block;
+	margin: 0.15em;
+	position: relative;
+	font-size: 1em;
+  }
+  
+  .social-icons i {
+	color: #fff;
+	position: absolute;
+	top: 43%; 
+    left: 50%;
+	transform: translate(-50%, -50%);
+	transition: all 265ms ease-out;
+  }
+  
+  .social-icons a {
+	display: inline-block;
+  }
+  
+  .social-icons a:before {
+	transform: scale(1);
+	-ms-transform: scale(1);
+	-webkit-transform: scale(1);
+	content: " ";
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	display: block;
+	background: #8167a9;
+	transition: all 265ms ease-out;
+  }
+  
+  .social-icons a:hover:before {
+	transform: scale(0);
+	transition: all 265ms ease-in;
+  }
+  
+  .social-icons a:hover i {
+	transform: scale(2.2);
+	-ms-transform: scale(2.2);
+	-webkit-transform: scale(2.2);
+	color: #e169ff;
+	background: #8167a9;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	transition: all 265ms ease-in;
+  }
+  
+  
