@@ -433,59 +433,58 @@ body.nav-active .nav__list-item:nth-child(10) {
 
 
 
+.social-container {
+    width: 400px;
+   
+    text-align: center;
+}
+
 .social-icons {
-	padding: 0;
-	list-style: none;
-	margin: 1em;
-  }
-  
-  .social-icons li {
-	display: inline-block;
-	margin: 0.15em;
-	position: relative;
-	font-size: 1em;
-  }
-  
-  .social-icons i {
-	color: #fff;
-	position: absolute;
-	top: 43%; 
-    left: 50%;
-	transform: translate(-50%, -50%);
-	transition: all 265ms ease-out;
-  }
-  
-  .social-icons a {
-	display: inline-block;
-  }
-  
-  .social-icons a:before {
-	transform: scale(1);
-	-ms-transform: scale(1);
-	-webkit-transform: scale(1);
-	content: " ";
-	width: 40px;
-	height: 40px;
-	border-radius: 100%;
-	display: block;
-	background: #8167a9;
-	transition: all 265ms ease-out;
-  }
-  
-  .social-icons a:hover:before {
-	transform: scale(0);
-	transition: all 265ms ease-in;
-  }
-  
-  .social-icons a:hover i {
-	transform: scale(2.2);
-	-ms-transform: scale(2.2);
-	-webkit-transform: scale(2.2);
-	color: #e169ff;
-	background: #8167a9;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	transition: all 265ms ease-in;
-  }
-  
-  
+    padding: 0;
+    list-style: none;
+    margin: 1em;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin: 0.15em;
+    position: relative;
+    font-size: 1.2em;
+}
+
+.social-icons i {
+    color: #fff;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    transition: all 0.3s ease-out; /* Asumiendo un valor para $timing */
+}
+
+.social-icons a {
+    display: inline-block;
+}
+
+.social-icons a:before {
+    content: " ";
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    display: block;
+    background: #8167a9; /* Sustituir $iconColor y $accent */
+    transition: all 0.3s ease-out; /* Asumiendo un valor para $timing */
+}
+
+.social-icons a:hover:before {
+    transform: scale(0);
+    transition: all 0.3s ease-in; /* Asumiendo un valor para $timing */
+}
+
+.social-icons a:hover i {
+    transform: scale(2.2); /* Sustituyendo @include transformScale(2.2) */
+    color: #000; /* Sustituir $iconColor */
+    background: #8167a9; /* Sustituir $iconColor y $accent */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in; /* Asumiendo un valor para $timing */
+}
+
