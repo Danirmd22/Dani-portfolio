@@ -19,6 +19,8 @@ var app = function () {
     init();
 }();
 
+
+
 document.addEventListener('DOMContentLoaded', function () {
     // typing animation
     function writeText(content, elem) {
@@ -37,3 +39,27 @@ document.addEventListener('DOMContentLoaded', function () {
     var holder = document.querySelector('#two-title');
     writeText("FRONT-END DEVELOPER", holder);
   });
+
+  window.addEventListener('scroll', function() {
+    var header = document.querySelector('.cd-header');
+    if (window.scrollY > 50) { // puedes ajustar este valor
+        header.style.backgroundColor = 'black';
+    } else {
+        header.style.backgroundColor = 'transparent'; // color original
+    }
+});
+
+
+
+window.onload = function() {
+    var skillbars = document.querySelectorAll('.skillbar');
+
+    skillbars.forEach(function(skillbar) {
+        var percent = skillbar.getAttribute('data-percent');
+        var bar = skillbar.querySelector('.skillbar-bar');
+
+        bar.style.width = percent;
+    });
+};  
+
+
