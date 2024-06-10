@@ -7,9 +7,12 @@ body {
     line-height: 1.7;
     color: #c4c3ca;
     background-color: #1f2029;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    margin: 0; 
     padding: 0;
-	margin: 0;
-   
     
     
 }
@@ -401,38 +404,29 @@ body.nav-active .nav__list-item:nth-child(10) {
 
 
 #header {
-	text-align: left;
-	
-	
-  }
-  
-  #welcome {
-	position: absolute;
-	top: 50%;
-	left: 65%;
-	transform: translate(-50%, -50%);
-  }
-  
-  
-  
-  
-
-  #header {
     display: flex;
     align-items: center; /* Esto centrará verticalmente los elementos hijos */
-    justify-content: flex-start; /* Esto alineará los elementos hijos a la izquierda */
+    justify-content: center; /* Esto alineará los elementos hijos al centro */
+    text-align: left;
+    flex-wrap: wrap; /* Esto permitirá que los elementos se envuelvan en varias líneas si no caben en una sola */
 }
 
-#header #cara {
-    order: -1; /* Esto asegurará que la imagen siempre esté a la izquierda */
-    position: absolute; /* Esto permitirá posicionar la imagen en cualquier lugar de la página */
-    top: 50%; /* Esto colocará la imagen en el medio de la página */
-    left: 20%; /* Esto colocará la imagen a la izquierda de la página */
-    transform: translateY(-50%); /* Esto centrará verticalmente la imagen */
-	
+#cara, #welcome {
+    flex: 1 0 auto; /* Esto hará que cada elemento tenga un ancho inicial automático */
+     
+    margin-right: 100px; /* Esto agregará una separación a la derecha de cada elemento */
+}
+ #welcome:last-child {
+    margin-right: 0; /* Esto eliminará el margen a la derecha del último elemento */
 }
 
+#cara {
+    flex-basis: 5%; /* Ajusta este valor según lo pequeño que quieras que sea #cara */
+}
 
+#welcome {
+    flex-basis: 30%; /* Ajusta este valor según lo grande que quieras que sea #welcome */
+}
 
 .social-container {
     width: 400px;
@@ -488,4 +482,3 @@ body.nav-active .nav__list-item:nth-child(10) {
     -webkit-text-fill-color: transparent;
     transition: all 0.3s ease-in; /* Asumiendo un valor para $timing */
 }
-
