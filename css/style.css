@@ -7,7 +7,8 @@ body {
     line-height: 1.7;
     color: #c4c3ca;
     background-color: #1f2029;
-    
+    padding: 0;
+	margin: 0;
    
     
     
@@ -426,7 +427,7 @@ body.nav-active .nav__list-item:nth-child(10) {
     order: -1; /* Esto asegurará que la imagen siempre esté a la izquierda */
     position: absolute; /* Esto permitirá posicionar la imagen en cualquier lugar de la página */
     top: 50%; /* Esto colocará la imagen en el medio de la página */
-    left: 25%; /* Esto colocará la imagen a la izquierda de la página */
+    left: 20%; /* Esto colocará la imagen a la izquierda de la página */
     transform: translateY(-50%); /* Esto centrará verticalmente la imagen */
 	
 }
@@ -447,7 +448,7 @@ body.nav-active .nav__list-item:nth-child(10) {
 
 .social-icons li {
     display: inline-block;
-    margin: 0.15em;
+    margin: 1em;
     position: relative;
     font-size: 1.2em;
 }
